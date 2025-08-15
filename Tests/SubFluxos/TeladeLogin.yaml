@@ -1,0 +1,12 @@
+appId: com.kobe.fila
+---
+
+- runFlow: AbrirApp.yaml         
+- runScript: ../Elementos/Login.js  
+- tapOn:
+    id: ${output.telalogin.botaoConta}
+- tapOn:
+    id: ${output.telalogin.botaoEntrarEmail}
+- tapOn:
+    id: ${output.telalogin.botaoEmailESenha}
+- assertVisible: ${output.telalogin.assertTelaLogin}

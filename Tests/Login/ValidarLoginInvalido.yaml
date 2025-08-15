@@ -1,0 +1,13 @@
+appId: com.kobe.fila
+---
+- runFlow: ../SubFluxos/TeladeLogin.yaml
+- runScript: ../Elementos/Login.js
+- tapOn:
+    id: ${output.telalogin.campoEmail}
+- inputText: "EmailInvalid@teste.com"
+- tapOn:
+    id: ${output.telalogin.campoSenha}
+- inputText: "Senha123"
+- tapOn:
+    id: ${output.telalogin.botaoEntrarLogin}
+- assertVisible: "Usuário ou senha inválidos."

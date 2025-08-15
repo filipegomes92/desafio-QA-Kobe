@@ -1,0 +1,4 @@
+appId: com.kobe.fila
+---
+- clearState #Limpa o status total o app, como se o mesmo fosse desinstalado e instalado novamente para realizacao dos testes
+- launchApp #inicia o APP

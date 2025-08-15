@@ -1,0 +1,8 @@
+appId: com.kobe.fila
+---
+- startRecording: TodosCenarios  #Iniciar gravação de vídeo de todo o fluxo
+- runFlow: ../Carrinho/ValidarAdicionarItenNaSacolaComSucesso.yaml #Executa o teste, neste caso ValidarAdicionarItenNaSacolaComSucesso
+- runFlow: ../Login/ValidarLoginComSucesso.yaml  
+- runFlow: ../Login/ValidarLoginInvalido.yaml  
+- waitForAnimationToEnd #Aguarda as ações para o vídeo não terminar antes
+- stopRecording #Pausa a gravação

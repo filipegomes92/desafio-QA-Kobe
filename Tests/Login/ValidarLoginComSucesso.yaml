@@ -1,0 +1,14 @@
+appId: com.kobe.fila
+---
+
+- runFlow: ../SubFluxos/TeladeLogin.yaml #Executa fluxo necessários para a validação deste caso de teste
+- runScript: ../Elementos/Login.js    #Busca os elmentos em um arquivo, mas fácil de dar manutenção em caso de alteração
+- tapOn:
+    id: ${output.telalogin.campoEmail}
+- inputText: "testekobe@mailna.co"
+- tapOn:
+    id: ${output.telalogin.campoSenha}
+- inputText: "Teste123" #insere o texto no campo
+- tapOn:
+    id: ${output.telalogin.botaoEntrarLogin} #clica no elemento
+- assertVisible: "Boas-vindas, Filipe!" #Valida a mensagem e visivel na tela

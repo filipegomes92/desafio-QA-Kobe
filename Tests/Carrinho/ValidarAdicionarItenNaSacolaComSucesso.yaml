@@ -1,0 +1,24 @@
+appId: com.kobe.fila
+---
+- runFlow: ../Login/ValidarLoginComSucesso.yaml
+- tapOn:
+    id: "cart"
+- assertVisible:
+    id: "Escolher produtos"
+- tapOn:
+    id: "Escolher produtos"
+- tapOn:
+    point: "93%,7%"
+- inputText: "Shorts Fila Basic Classic Light Feminino"
+- pressKey: Enter  
+#- assertVisible: "Shorts Fila Basic Classic Light Feminino\n\nR$\_169,99\n12x de R$\_\
+#    14,16 sem juros"
+- tapOn: "Shorts Fila Basic Classic Light Feminino\n\nR$\_169,99\n12x de R$\_14,16\
+    \ sem juros"
+- assertVisible: "Ref F12L00880_3616_3601499 | EAN: 7909943619672"
+- scroll  
+- tapOn: "G"
+- tapOn: "ADICIONAR À SACOLA"
+- tapOn:
+    id: "Carrinho"
+- assertVisible: "Shorts Fila Basic Classic Light Feminino\nTamanho: G\nR$\_169,99"
